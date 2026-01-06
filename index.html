@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiVibe Events | Luxury White & Pink</title>
+    <style>
+        :root {
+            --primary-pink: #db2777; 
+            --soft-pink: #fdf2f8;    
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
+
+        /* Navigation */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(219, 39, 119, 0.1);
+        }
+        .logo { color: var(--text-dark); font-size: 1.6rem; font-weight: 800; text-transform: uppercase; }
+        .logo span { color: var(--primary-pink); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li a { color: var(--text-dark); text-decoration: none; padding: 0.5rem 1rem; font-weight: 600; }
+        nav ul li a:hover { color: var(--primary-pink); }
+
+        /* HERO SECTION - NEW IMAGE URL */
+        #home {
+            height: 95vh;
+            /* Direct link to a Pink/White Luxury Event Setup */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.pexels.com/photos/2060239/pexels-photo-2060239.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        #home h1 { font-size: 5rem; margin-bottom: 10px; text-shadow: 2px 4px 15px rgba(0,0,0,0.6); }
+        #home h1 span { color: #f9a8d4; }
+        #home p { font-size: 1.8rem; margin-bottom: 30px; font-weight: 300; }
+
+        .btn {
+            padding: 1.2rem 3.5rem;
+            background: var(--primary-pink);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(219, 39, 119, 0.4);
+        }
+        .btn:hover { background: white; color: var(--primary-pink); transform: scale(1.05); }
+
+        /* Sections */
+        section { padding: 100px 5%; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: var(--text-dark); }
+        .section-title span { color: var(--primary-pink); }
+
+        /* About Section */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-box { background: var(--soft-pink); padding: 30px; border-radius: 15px; border-left: 6px solid var(--primary-pink); }
+
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { padding: 40px; border: 1px solid var(--soft-pink); text-align: center; border-radius: 20px; transition: var(--transition); box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .service-card:hover { border-color: var(--primary-pink); background: var(--soft-pink); transform: translateY(-10px); }
+        .service-card h3 { color: var(--primary-pink); margin-bottom: 15px; }
+
+        /* Contact */
+        .contact-row { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; }
+        form { background: var(--soft-pink); padding: 40px; border-radius: 20px; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        
+        footer { background: #111; color: white; padding: 50px 0; text-align: center; }
+        .footer-logo { font-size: 2rem; color: var(--primary-pink); font-weight: bold; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">DigiVibe <span>Events</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to <span>DigiVibe</span></h1>
+        <p>We Create Moments That Last Forever</p>
+        <a href="#services" class="btn">Start Planning</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About <span>Us</span></h2>
+        <div class="about-grid">
+            <div>
+                <h3 style="color: var(--primary-pink); margin-bottom: 20px;">Experts in Luxury Celebrations</h3>
+                <p>DigiVibe Events is Lahore's premier event management system. We don't just organize events; we craft experiences. With our signature White & Pink themes, we bring a sense of purity and joy to every occasion.</p>
+                <div class="about-box" style="margin-top: 30px;">
+                    <h4>Our Mission</h4>
+                    <p>To provide high-end, stress-free event planning for weddings, birthdays, and corporate gatherings.</p>
+                </div>
+            </div>
+            <div style="background: var(--soft-pink); padding: 40px; border-radius: 20px;">
+                <h3 style="margin-bottom: 20px;">Why DigiVibe?</h3>
+                <p>🌸 Fully Customized Decor<br>🌸 24/7 Dedicated Support<br>🌸 Best Vendors in Lahore<br>🌸 Budget-Friendly Luxury</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background: #fff;">
+        <div class="container">
+            <h2 class="section-title">Our <span>Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card"><h3>Wedding Planning</h3><p>Full-service luxury wedding management.</p></div>
+                <div class="service-card"><h3>Birthday Events</h3><p>Themed parties for magical memories.</p></div>
+                <div class="service-card"><h3>Corporate Events</h3><p>Professional summits and launches.</p></div>
+                <div class="service-card"><h3>Decorations</h3><p>Exclusive floral and pink arrangements.</p></div>
+                <div class="service-card"><h3>Catering</h3><p>Delicious menus for your guests.</p></div>
+                <div class="service-card"><h3>Photography</h3><p>Capturing your beautiful moments.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="contact-row">
+            <div>
+                <p style="margin-bottom: 20px;"><strong>Phone:</strong> +9322-6148189</p>
+                <p style="margin-bottom: 20px;"><strong>Email:</strong> s2024463004@umt.edu.com</p>
+                <p style="margin-bottom: 40px;"><strong>Address:</strong> UMT, Johar Town, Lahore.</p>
+                
+                <div style="background: var(--primary-pink); color: white; padding: 25px; border-radius: 15px;">
+                    <p>"The pink theme was absolutely breathtaking. Thank you DigiVibe!"</p>
+                    <p style="text-align: right; margin-top: 10px;"><strong>- Happy Client</strong></p>
+                </div>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Tell us about your event details..."></textarea>
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">DigiVibe <span>Events</span></div>
+        <p>&copy; 2026 DigiVibe Events | Lahore, Pakistan</p>
+    </footer>
+
+</body>
+</html>

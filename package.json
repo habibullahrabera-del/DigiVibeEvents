@@ -1,0 +1,10 @@
+{
+  "name": "digivibe-events",
+  "version": "1.0.0",
+  "description": "Static site for DigiVibe Events with a simple live-server start script.",
+  "scripts": {
+    "start": "npx live-server --port=5500 --open=./"
+  },
+  "author": "",
+  "license": "ISC"
+}
