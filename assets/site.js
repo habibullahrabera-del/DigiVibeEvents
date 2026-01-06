@@ -58,4 +58,14 @@ window.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', ()=> back.classList.toggle('visible', window.scrollY > 400));
         back.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
     }
+
+    // Image fallback: replace any broken images with placeholder
+    document.querySelectorAll('img').forEach(img=>{
+        img.addEventListener('error', function(){
+            if(!this.dataset._placeholder){
+                this.dataset._placeholder = '1';
+                this.src = 'assets/images/placeholder.png';
+            }
+        });
+    });
 });
