@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function () {
         img.addEventListener('error', function(){
             if(!this.dataset._placeholder){
                 this.dataset._placeholder = '1';
-                this.src = 'assets/images/placeholder.png';
+                this.src = '/assets/images/placeholder.png';
             }
         });
     });
