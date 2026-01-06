@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/index.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/services/birthday.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/services/wedding.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/services/decorations.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/services/catering.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/services/corporate.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    },
+    {
+      "path": "/services/photography.html",
+      "console": [],
+      "failed_requests": [],
+      "status": 200
+    }
+  ]
+}
