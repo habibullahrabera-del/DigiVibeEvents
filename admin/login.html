@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiVibe Events - Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary-pink: #db2777; --soft-pink: #fdf2f8; --white: #ffffff; --text-dark: #1e293b; --transition: all 0.4s ease; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: linear-gradient(135deg, var(--soft-pink) 0%, var(--white) 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .login-container { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        .login-header { text-align: center; margin-bottom: 30px; }
+        .login-header h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--text-dark); margin-bottom: 5px; }
+        .login-header p { color: #64748b; font-size: 0.9rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+        .form-group input { width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 10px; outline: none; transition: var(--transition); font-size: 1rem; }
+        .form-group input:focus { border-color: var(--primary-pink); }
+        .login-btn { width: 100%; padding: 12px; background: var(--primary-pink); color: var(--white); border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: var(--transition); font-size: 1rem; }
+        .login-btn:hover { background: #be185d; transform: translateY(-2px); }
+        .error-msg { color: #e74c3c; font-size: 0.9rem; margin-top: 10px; display: none; }
+        .success-msg { color: #27ae60; font-size: 0.9rem; margin-top: 10px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>DigiVibe <span style="color: var(--primary-pink);">Admin</span></h1>
+            <p>Manage Your Events</p>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="admin@digivibe.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="login-btn">Login to Dashboard</button>
+            <div class="error-msg" id="errorMsg"></div>
+            <div class="success-msg" id="successMsg"></div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (email === 'admin@digivibe.com' && password === 'admin123') {
+                localStorage.setItem('adminLoggedIn', 'true');
+                localStorage.setItem('adminEmail', email);
+                document.getElementById('successMsg').textContent = 'Login successful! Redirecting...';
+                document.getElementById('successMsg').style.display = 'block';
+                setTimeout(() => window.location.href = 'dashboard.html', 1500);
+            } else {
+                document.getElementById('errorMsg').textContent = 'Invalid email or password';
+                document.getElementById('errorMsg').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
